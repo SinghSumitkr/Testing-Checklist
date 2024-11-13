@@ -1,18 +1,22 @@
-Subject: Feasibility Check for Qlik Sense Automation and Bookmark Sharing Capability
+Thank you all for joining today’s Sprint Review! It’s been a productive sprint, and I’m excited to walk you through the key updates and accomplishments.
 
-Hi [GTA Team],
+1. Recon Dashboard
+Starting with the Recon Dashboard—this has seen a complete overhaul in its extract query. We’ve now aligned the extract query fully with the UI backend, effectively removing any possibility of discrepancies between different interfaces. This sync effort is a big step towards standardizing our systems, making them more reliable and cohesive.
 
-I hope you’re doing well. We need your help to assess the feasibility of a few enhancements in our Qlik Sense environment to automate certain processes and improve user functionality. Below are the key requirements and their anticipated impact:
+2. Equities NA
+For Equities NA, we’ve proactively built the dashboard skeleton using on-premises data. This setup allows us to switch seamlessly to cloud data as soon as it becomes available. This approach will accelerate our dashboard migration process, enabling us to stay ahead of schedule and respond quickly when cloud data is ready to consume.
 
-External Trigger for Dashboard Refresh
-We’re aiming to automate our workflow by triggering Qlik Sense dashboard refreshes directly after specific database updates. Ideally, this would be handled via an API or another external trigger, removing the need for manual intervention and ensuring real-time data availability. Could you confirm if Qlik Sense supports external event-based triggers for refreshes? If there are restrictions, please let us know the steps to request any necessary exceptions.
+3. Entitlement - Cash Agent
+Next, we made substantial progress in the Cash Agent entitlement configuration. Previously, all accounts were mapped to "Cash," but with the upcoming allocation within Cash AB, we’re onboarding “Securities Related Cash” as well. To keep this distinction clear for our stakeholders, we created an LOB-driven entitlement configuration to separate Cash accounts from Securities-Related Cash. This step is crucial to maintaining accuracy and clarity as we expand our capabilities.
 
-Metadata Logging to S3 Post-Refresh
-Once a dashboard refresh completes, we’d like Qlik Sense to log metadata or status information to an S3 environment, enabling other systems to proceed with dependent tasks. Alternatively, if logging directly to S3 is not feasible, an API that can check the refresh completion status would also work for us. Could you share any infrastructure limitations or permission requirements for this?
+4. MD Pricing
+We’ve also taken an essential step in MD Pricing by integrating historical data with AWS. This setup allows us to give users access to a larger dataset while keeping processing work at a minimum by using both on-premises and cloud data together. This blended data approach ensures our users can access richer historical data without compromising performance.
 
-Bookmark Sharing Enablement
-Users previously used the bookmark-sharing feature in QlikView to facilitate collaboration, but this capability is currently restricted in Qlik Sense. Users have expressed that the inability to share bookmarks limits their workflow, and they are actively requesting this feature. Could we explore enabling bookmark sharing in Qlik Sense to match the collaborative functionality users had in QlikView?
+5. Exception Dashboard
+The Exception Dashboard has been re-aligned to work with the new Glue tables, keeping it up to date with the database changes. This alignment will keep our dashboard in sync with ongoing DB activities, enhancing accuracy and reliability.
 
-Please let us know your thoughts on the above points, any limitations, and the process for requesting exceptions if needed. Your guidance will be invaluable in helping us streamline our processes and improve user experience.
+6. Analysis JIRA for Discount Calculations
+Finally, we tackled the Analysis JIRA to investigate how Discount Values are calculated. Following this analysis, we’ve implemented new steps to streamline and standardize discount calculations, ensuring accuracy and consistency across the board.
 
-Thank you for your support!
+Critical Defects and Support Activities
+In addition to our Story JIRAs, the team resolved five critical defects, which is a fantastic achievement! Each fix not only improves system stability but also enhances the user experience. We also dedicated time to support the Spike Jira, which added new insights, and allocated a day to the Sprint Release process
