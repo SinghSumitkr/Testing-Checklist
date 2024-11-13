@@ -1,30 +1,18 @@
-Subject: Feasibility Check on Qlik Sense Capabilities for External Event Triggers, Metadata Logging, and Bookmark Sharing Feature
+Subject: Feasibility Check for Qlik Sense Automation and Bookmark Sharing Capability
 
-Dear [GTA Team],
+Hi [GTA Team],
 
-I’m reaching out to request your assistance in evaluating the feasibility of implementing specific capabilities within the Qlik Sense environment. Our team is working on automating a sequential process that involves database updates, dashboard refreshes, and report generation, with an additional requirement for sharing bookmarks. Below is a detailed outline of the requirements we’re exploring and their anticipated impact.
+I hope you’re doing well. We need your help to assess the feasibility of a few enhancements in our Qlik Sense environment to automate certain processes and improve user functionality. Below are the key requirements and their anticipated impact:
 
-1. Dashboard Refresh Trigger by External Event
-Requirement: We need a mechanism, preferably an API or other trigger method, that initiates a Qlik Sense dashboard refresh immediately after specific database activities are completed. This would help ensure data currency without manual intervention, reducing any delay between the data update and dashboard refresh.
+External Trigger for Dashboard Refresh
+We’re aiming to automate our workflow by triggering Qlik Sense dashboard refreshes directly after specific database updates. Ideally, this would be handled via an API or another external trigger, removing the need for manual intervention and ensuring real-time data availability. Could you confirm if Qlik Sense supports external event-based triggers for refreshes? If there are restrictions, please let us know the steps to request any necessary exceptions.
 
-Impact: By automating the refresh initiation, we can streamline the process flow, eliminate manual dependencies, and improve response time in presenting up-to-date data to the end user.
+Metadata Logging to S3 Post-Refresh
+Once a dashboard refresh completes, we’d like Qlik Sense to log metadata or status information to an S3 environment, enabling other systems to proceed with dependent tasks. Alternatively, if logging directly to S3 is not feasible, an API that can check the refresh completion status would also work for us. Could you share any infrastructure limitations or permission requirements for this?
 
-Assistance Requested: Could you confirm whether Qlik Sense supports external triggers for refreshing dashboards, and if so, outline any infrastructure requirements or restrictions? Additionally, please advise on any exceptions or permissions required if such actions are restricted within the current setup.
+Bookmark Sharing Enablement
+Users previously used the bookmark-sharing feature in QlikView to facilitate collaboration, but this capability is currently restricted in Qlik Sense. Users have expressed that the inability to share bookmarks limits their workflow, and they are actively requesting this feature. Could we explore enabling bookmark sharing in Qlik Sense to match the collaborative functionality users had in QlikView?
 
-2. Logging Metadata to S3 Post Dashboard Refresh Completion
-Requirement: Upon completion of the dashboard refresh, we aim to have Qlik Sense write metadata or refresh logs to an S3 environment. This step is crucial for enabling other systems to retrieve the refresh status and trigger subsequent tasks in the process flow.
+Please let us know your thoughts on the above points, any limitations, and the process for requesting exceptions if needed. Your guidance will be invaluable in helping us streamline our processes and improve user experience.
 
-Alternative Approach: If direct metadata logging to S3 is not feasible, we would like to explore an API that can verify dashboard refresh completion. Once confirmed, the API could trigger the next step in the process externally.
-
-Impact: Logging metadata or enabling refresh status checks ensures synchronization between our database updates and dashboard availability, ultimately enhancing automation and reducing time gaps.
-
-Assistance Requested: Please clarify the possibilities for either (a) writing metadata directly to S3 post-refresh or (b) configuring an API to validate dashboard refresh completion status within the Qlik Sense environment. If there are any infrastructure limitations or compliance restrictions, kindly outline the necessary steps to request an exception.
-
-3. Enabling Bookmark Sharing for Users
-Background: Previously, in QlikView, users extensively utilized the bookmark-sharing feature to collaborate and share insights directly. Following our migration to Qlik Sense, users can only create personal bookmarks, with sharing disabled due to current GTA restrictions. However, users have expressed persistent demand for this feature, as it is essential for their workflows and aligns with their expectations from our Qlik migration.
-
-Request: We request that bookmark sharing functionality be enabled within Qlik Sense, mirroring the collaborative capability previously available in QlikView. Users have found it challenging to adopt the Qlik Sense dashboards without this feature, and addressing this gap is critical to maintaining user satisfaction and supporting effective data collaboration.
-
-We appreciate your guidance on the feasibility and any associated configuration or compliance steps for each of these requirements. If there are any restrictions or exceptions needed, please let us know the process to initiate these requests.
-
-Thank you for your support, and we look forward to your insights.
+Thank you for your support!
