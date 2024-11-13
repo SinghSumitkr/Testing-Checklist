@@ -1,5 +1,10 @@
- hope you're doing well. I noticed that the position for Business Intelligence & Reporting - Product Manager - Vice President appears to be open again and wanted to reach out to express my continued interest in the role.
+I hope this message finds you well. I am excited to see the opening for the Vice President of Data Visualization role and am confident that my background makes me a strong fit for the position. With over 14 years in analytics and visualization, coupled with a deep understanding of the banking industry from my time at JP Morgan and HSBC, I bring both the technical expertise and strategic insights needed to drive impactful visual solutions for our Finance team.
 
-In our previous discussions, I had the opportunity to speak with Saumya Shankar, followed by Badrika Dash and Ram Ponku. I thoroughly enjoyed these conversations, and felt that the interviews went well; however, I was not selected to move forward at that time. Reflecting on those discussions, I'm even more confident that I am an excellent fit for the role and could contribute effectively from day one, thanks to my familiarity with the team’s expectations and project goals.
+My recent Advanced Data Analytics certification from IIM Kozhikode has further expanded my perspective on harnessing machine learning in visualization, an area I am eager to explore further in this role to elevate our analytics capabilities. My track record at JP Morgan includes significant optimization of BI processes, pioneering data migration to AWS, and crafting user-centered dashboards that have driven measurable efficiency gains and stakeholder satisfaction.
 
-I would be truly grateful if I could be considered once more for this role. I am confident in my ability to hit the ground running and make an immediate impact. Thank you very much for your time and consideration, and I hope to hear from you soon.
+I would love to connect, even if briefly, to share my approach for accelerating the team’s goals and discuss my vision for enhancing our data storytelling and analytics strategy. Please let me know if there’s a convenient time to meet, whether virtually or over a quick meal.
+
+Looking forward to the opportunity to contribute to our shared goals.
+
+Warm regards,
+Sumit Kumar Singh
