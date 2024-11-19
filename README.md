@@ -1,22 +1,29 @@
-Thank you all for joining today’s Sprint Review! It’s been a productive sprint, and I’m excited to walk you through the key updates and accomplishments.
+Date: [Specify Date]
 
-1. Recon Dashboard
-Starting with the Recon Dashboard—this has seen a complete overhaul in its extract query. We’ve now aligned the extract query fully with the UI backend, effectively removing any possibility of discrepancies between different interfaces. This sync effort is a big step towards standardizing our systems, making them more reliable and cohesive.
+Attendees: [List of Attendees]
 
-2. Equities NA
-For Equities NA, we’ve proactively built the dashboard skeleton using on-premises data. This setup allows us to switch seamlessly to cloud data as soon as it becomes available. This approach will accelerate our dashboard migration process, enabling us to stay ahead of schedule and respond quickly when cloud data is ready to consume.
+Agenda:
 
-3. Entitlement - Cash Agent
-Next, we made substantial progress in the Cash Agent entitlement configuration. Previously, all accounts were mapped to "Cash," but with the upcoming allocation within Cash AB, we’re onboarding “Securities Related Cash” as well. To keep this distinction clear for our stakeholders, we created an LOB-driven entitlement configuration to separate Cash accounts from Securities-Related Cash. This step is crucial to maintaining accuracy and clarity as we expand our capabilities.
+Discussion on integrating external triggers using QRS API
+Metadata logging approach and potential limitations
+Feature requests for bookmark sharing and alert enhancements
+1. External Trigger Using QRS API
 
-4. MD Pricing
-We’ve also taken an essential step in MD Pricing by integrating historical data with AWS. This setup allows us to give users access to a larger dataset while keeping processing work at a minimum by using both on-premises and cloud data together. This blended data approach ensures our users can access richer historical data without compromising performance.
+Reference: QRS API Documentation
+Action: Mahesh will share details of the team (AWM/GWM team, incoming from Snowflake) that has successfully integrated with the QRS API for reference.
+2. Metadata Logging to S3
 
-5. Exception Dashboard
-The Exception Dashboard has been re-aligned to work with the new Glue tables, keeping it up to date with the database changes. This alignment will keep our dashboard in sync with ongoing DB activities, enhancing accuracy and reliability.
+Discussed that direct logging of metadata to S3 may not be feasible.
+Alternative Solution: Consider taking metadata and logging it into an app.
+Action: Mahesh will share details of a team that has implemented this approach.
+3. Feature Requests for Qlik Enhancements
 
-6. Analysis JIRA for Discount Calculations
-Finally, we tackled the Analysis JIRA to investigate how Discount Values are calculated. Following this analysis, we’ve implemented new steps to streamline and standardize discount calculations, ensuring accuracy and consistency across the board.
+Requests:
+Enable bookmark sharing functionality.
+Introduce a Generous Alert feature.
+Action: Raise feature requests via the feature request portal ([go/featurerequest - Qlik](go/featurerequest - Qlik)).
+Follow-up: Mahesh will check the feasibility of these requests and report back.
+Next Steps:
 
-Critical Defects and Support Activities
-In addition to our Story JIRAs, the team resolved five critical defects, which is a fantastic achievement! Each fix not only improves system stability but also enhances the user experience. We also dedicated time to support the Spike Jira, which added new insights, and allocated a day to the Sprint Release process
+Mahesh to share team details regarding QRS API integration and metadata logging workaround.
+All attendees to monitor the status of the feature request and check back on feasibility updates from Mahesh.
