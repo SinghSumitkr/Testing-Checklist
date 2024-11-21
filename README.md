@@ -1,29 +1,33 @@
-Date: [Specify Date]
+// Step 1: Extract table-level metadata
+TableMetadata:
+LOAD
+    TableName() AS TableName,
+    NoOfRows(TableName()) AS RecordCount
+AUTOGENERATE NoOfTables();
 
-Attendees: [List of Attendees]
+// Step 2: Extract field-level metadata
+FieldMetadata:
+LOAD
+    TableName() AS TableName,
+    FieldName(FieldNo(), TableName()) AS FieldName,
+    FieldNo() AS FieldPosition,
+    FieldValueCount(FieldName(FieldNo(), TableName())) AS DistinctCount,
+    IsNum(FieldName(FieldNo(), TableName())) AS IsNumeric
+WHILE FieldNo() <= NoOfFields(TableName())
+AUTOGENERATE 1
+WHILE TableNo() <= NoOfTables();
 
-Agenda:
+// Step 3: Extract numeric field statistics
+NumericFieldStats:
+LOAD
+    TableName,
+    FieldName,
+    If(IsNumeric, MinString(FieldName), Null()) AS MinValue,
+    If(IsNumeric, MaxString(FieldName), Null()) AS MaxValue,
+    If(IsNumeric, Avg(FieldName), Null()) AS AverageValue,
+    If(IsNumeric, Sum(FieldName), Null()) AS TotalValue
+RESIDENT FieldMetadata
+WHERE IsNumeric = -1; // Filter numeric fields only
 
-Discussion on integrating external triggers using QRS API
-Metadata logging approach and potential limitations
-Feature requests for bookmark sharing and alert enhancements
-1. External Trigger Using QRS API
-
-Reference: QRS API Documentation
-Action: Mahesh will share details of the team (AWM/GWM team, incoming from Snowflake) that has successfully integrated with the QRS API for reference.
-2. Metadata Logging to S3
-
-Discussed that direct logging of metadata to S3 may not be feasible.
-Alternative Solution: Consider taking metadata and logging it into an app.
-Action: Mahesh will share details of a team that has implemented this approach.
-3. Feature Requests for Qlik Enhancements
-
-Requests:
-Enable bookmark sharing functionality.
-Introduce a Generous Alert feature.
-Action: Raise feature requests via the feature request portal ([go/featurerequest - Qlik](go/featurerequest - Qlik)).
-Follow-up: Mahesh will check the feasibility of these requests and report back.
-Next Steps:
-
-Mahesh to share team details regarding QRS API integration and metadata logging workaround.
-All attendees to monitor the status of the feature request and check back on feasibility updates from Mahesh.
+// Drop intermediate tables if needed
+DROP TABLE FieldMetadata;
