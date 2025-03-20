@@ -1,101 +1,164 @@
-What to Do & How to Go About It
-1. Follow Up on OTC Dashboards (Logic Documentation)
-What: Ashwin wants clarity on OTC dashboard logic—your ongoing documentation effort fits perfectly.  
+Detailed Plan for Lara
+Stage 1: Connect & Scope Billing Cycle Metrics (March 18-20, 2025)
+What: Engage Ady/Kristin to understand the Tableau dashboards—set the foundation.  
 
 How:  
-Email Today (March 18):  
-Subject: “OTC Dashboard Logic – Next Steps”  
+Reply to Lara’s Email (March 18):  
+Subject: “Billing Cycle Metrics – Kicking Off”  
 
-“Hey Ashwin, thanks for today! I’ll prioritize OTC dashboards for end-to-end logic documentation—covering extraction, transformation, and dashboard layers. Expect a draft for one OTC dashboard by March 31—any specific one you’d flag? I’ll loop in Praveen to sync on Saurabh’s work too.”
+“Hi Lara, Ady, Kristin—thanks for the heads-up! Excited to streamline Billing Cycle Metrics—moving them from Tableau to ExCapp Qlik Sense aligns perfectly with speeding time to market and scaling ExCapp. I’ll text Ady/Kristin for a 15-min walkthrough by Wednesday (Kristin’s last day). Lara, any priority metric (e.g., time to market)? I’ll share a plan post-chat.”
 
-Action:  
-Pick one OTC dashboard (e.g., “OTC Trades”)—document layers (e.g., “GOS DB extract: SUM(trade_value), Transform: filter active trades, Dashboard: bar chart”).  
+Text Ady/Kristin (March 18):  
+“Hey Ady/Kristin—Lara suggested I see your Billing Cycle Tableau dashboards. Free for 15 mins Tuesday/Wednesday? Want to review metrics—clients, reports, time, commission, costs.”
 
-Check with Praveen: “Hey, any OTC ProdX fixes live? Ashwin mentioned Saurabh’s stuff.”  
+Walkthrough (March 19-20):  
+Ask:  
+“What’s tracked? (e.g., 50 clients, 10 reports/day, 3-day time to market, $25M commission, $5M costs)”  
 
-Deliver draft (PDF/Google Doc) by March 31—share with Ashwin: “Here’s OTC logic—thoughts?”
+“Data source? All ExCapp STP?”  
 
-Why: Quick win—aligns with your migration parallel, cuts ProdX confusion (skip-level’s goal), earns Ashwin’s trust.
+“Pain points? Slow refreshes, manual steps?”
 
-2. Tackle CIT Dashboard (UAT Prototype)
-What: Ashwin’s keen on CIT—critical for management tracking/control, needs “right data” via a mockup. Budget’s a hurdle, but you can prototype in UAT.  
+Note: “Tableau: Bar chart—time to market trend, Table—commission totals.”
 
-How:  
-Wait for Mockup: Ashwin’s team will send it—reply fast: “Got it—reviewing now!”  
+Why: Grounds your solution—links “speed” and “scale” to Lara’s goals.
 
-Analyze (March 19-25):  
-Study mockup—note asks (e.g., “Aging buckets, control flags”).  
+Output: Metrics scope—e.g., “50 clients, 3-day avg, $25M commission—all ExCapp.”
 
-Map to QlikView CIT: “Current: GOS DB, 5h refresh—issues?”  
-
-Propose: “UAT prototype—Qlik Sense, GOS data, new layout, 2h refresh.”
-
-Build (April 1-15):  
-Use personal capacity—Qlik Sense Desktop or DEV—revamp UI (like Jen’s “sleek” win), optimize logic (e.g., 5h to 2h).  
-
-Test in UAT—show Ashwin: “Here’s CIT v1—matches mock, tweakable.”
-
-Pitch (April 16): “This stays UAT till budget—solves tracking now, Prod later.”  
-
-Why: Shows VP-level initiative—delivers value despite constraints, ties to “intuitive” praise.
-
-3. Leverage Ashwin’s Support (VP Exposure)
-What: Ashwin’s offering sponsorship—feedback from him and seniors (Ede, James)—huge for your VP case.  
+Stage 2: Prototype Billing Cycle Dashboard in Qlik Sense (March 21-31)
+What: Build a Qlik Sense version in DEV/UAT—replicate Tableau, enhance speed.  
 
 How:  
-Thank You (March 18):  
-Post-call email: “Ashwin, huge thanks for backing my VP push—excited to collaborate on OTC and CIT. Let me know when to sync monthly!”
+Analyze (March 21-23):  
+Map Tableau: “Trend: Time to Market (3d avg), Summary: 50 clients, $25M commission”—ExCapp data (e.g., GOS DB).  
 
-Monthly Check-Ins:  
-April 16 (post-CIT): “Hey Ashwin, CIT’s in UAT—5min chat on progress?”  
+Speed Goal: Cut time to market visibility—e.g., 3-day lag to 1-day via optimized extract (like BD1 75%).
 
-Ask: “Any chance to demo to Ede/James—get their take?”
+Build (March 24-28):  
+Qlik Sense DEV: Load ExCapp data—“SELECT client_id, report_date, commission FROM gos_table”.  
 
-Feedback Ask (April 30):  
-“If OTC docs and CIT prototype help, could you note it—like MANA’s ‘excellent’—for my VP case? Maybe Ede too?”
+Design: “Sleek” UI (Jen’s praise)—line chart (time to market trend), table (clients: 50, commission: $25M).  
 
-Escalate: If he intros Ede/James, prep 3-line case (e.g., “Slashed BD1 75%, led team…”).  
+Test: “10 reports/day, 1-day refresh—matches Tableau?”
 
-Why: Builds your “platform”—Ashwin’s help + senior visibility = unbeatable VP backing.
+Share (March 31):  
+Email Lara/Ady: “Hi Lara, Ady—Billing Cycle v1 in UAT: 50 clients, 10 reports, 1-day time to market (was 3d), $25M commission, $5M costs. Ady, aligns with Tableau? Lara, thoughts—useful for Ops/Business?”
 
-4. Sync Internally (Praveen & Manager)
-What: Ensure alignment—Praveen’s OTC work and your manager’s handover don’t clash.  
+Why: Delivers “speed” (1d vs. 3d) + “scale” (ExCapp home)—VP initiative, no Prod push yet.
+
+Output: UAT dashboard—e.g., “Billing Cycle v1: 67% faster visibility.”
+
+Stage 3: Plan Self-Service Integration (April 1-15)
+What: Add self-service features to the dashboard—align with Lara’s “remove tech dependencies” goal.  
 
 How:  
-Praveen (March 19): “Hey, Ashwin flagged OTC fixes—Saurabh’s stuff with you? I’m documenting logic—overlap?”  
+Design (April 1-7):  
+Add filters: “Client Name, Report Date”—e.g., “Show: Time to Market, Commission”.  
 
-Manager (March 20): “Ashwin’s on board—OTC docs and CIT prototype in UAT. I’m driving this—frees you up, cool?”  
+Logic: “COUNT(reports), AVG(time_to_market), SUM(commission)”—dynamic, no tech lift.  
 
-Why: Avoids duplication, reinforces your takeover (25% Prod cut plausible).
+Test: “Ops pulls 5-client view, 2 clicks—1-min load.”
 
-Timeline (March 18 - April 30)
-March 18-19: Email Ashwin (OTC priority), sync Praveen/manager.  
+Validate (April 8-14):  
+Compare: “Tableau manual vs. Qlik self-serve—same $25M?”  
 
-March 20-31: Document OTC dashboard—share draft.  
+Tweak: If 1-min load lags, optimize (like 7min fix).
 
-April 1-15: Build CIT UAT prototype (post-mockup).  
+Pitch (April 15):  
+Email Lara: “Billing Cycle v2—self-service filters added. Ops can track trends (e.g., 1d time to market) sans tech. Next—Prod plan or more tweaks?”
 
-April 16: Demo CIT to Ashwin, set monthly cadence, nudge Ede intro.  
+Why: Hits “self-serve”—future-proofs for Ops/Business, VP strategic edge.
 
-April 30: Deliver OTC doc + CIT v1, request feedback (Ashwin/Ede).
+Output: Self-service mock—e.g., “2-click trends, no tech needed.”
 
-How to Approach It
-Proactive: Lead OTC docs now—don’t wait for Ashwin’s ping.  
+Stage 4: Explore Broader Cost/Commission Tracking (April 16-30)
+What: Assess James’s org-wide receivable streams—scale ExCapp beyond cost-plus.  
 
-Personal Capacity: CIT in UAT—ethical, budget-safe, shows grit (VP trait).  
+How:  
+Ask Lara (April 16):  
+“Hey Lara—cost-plus is humming. You mentioned James’s cost/commission streams—any non-ExCapp ones to pull in? I’ll scope it.”
 
-Collaborative: Loop Ashwin’s team—e.g., “Sending CIT mock notes—who’s my point?”  
+Investigate (April 17-25):  
+Ady/Sophie: “Other products tracked offline? Data sources?”  
 
-Strategic: Push exposure—“Ede’s take would rock my case!”—Ashwin’s your sponsor.
+Example: “Equity commissions—$10M, Excel—map to ExCapp?”  
+
+Mock: Extend dashboard—“All Streams: $35M total, 1d trend.”
+
+Share (April 30):  
+“Lara—draft for James’s org: $35M across cost-plus + equities, ExCapp-ready. Ops impact?”
+
+Why: Scales ExCapp—“big picture” win, ED (James) relevance.
+
+Output: Extended mock—e.g., “All Streams v1: $35M, unified view.”
+
+Stage 5: Lock Feedback & ED Visibility (May 1-15)
+What: Secure Lara’s feedback, push for James’s nod—VP case sealed.  
+
+How:  
+Feedback (May 1):  
+Email Lara: “Billing Cycle in ExCapp—cut time to market 67% (3d→1d), self-serve live, $25M tracked. Note for my VP case—‘sped client delivery’?”
+
+ED Push (May 1-15):  
+“Lara—James’s take on this or broader streams? Boosts my VP run.”  
+
+Sync: “May 15—5min check?”
+
+Prep for James: If intro’d, pitch:  
+“Sped Billing Cycle 67%—Qlik Sense, ExCapp-led.”  
+
+“Self-serve for Ops—99% cases, no tech.”  
+
+“Scaled $35M streams—ED-ready vision.”
+
+Why: Lara’s praise + James’s nod—“Sumit transformed reporting, ED-backed”—unbeatable.
+
+Output: Feedback—e.g., “Lara: ‘Game-changer for speed.’”
+
+Timeline
+March 18-20: Email Lara/Ady/Kristin, walkthrough—scope Tableau.  
+
+March 21-31: Build Billing Cycle v1—share UAT draft.  
+
+April 1-15: Add self-service—pitch v2.  
+
+April 16-30: Scope James’s streams—extended mock.  
+
+May 1-15: Lock feedback, James intro—VP case ready.
+
+How to Approach Each Stage
+Stage 1: Engaging—“Show me your world”—learn fast, align goals.  
+
+Stage 2: Decisive—“Here’s v1—67% faster”—quick impact, UAT-safe.  
+
+Stage 3: Innovative—“Self-serve in 2 clicks”—Lara’s vision live.  
+
+Stage 4: Strategic—“$35M org-wide—James’s scale”—ED-level thinking.  
+
+Stage 5: Collaborative—“Your words + James’s eyes = VP”—seal it.
+
+Penetrating Lara’s Challenges
+Speed: “Cut time to market 67%—clients get data day 1, not 3.”  
+
+Scale: “Billing Cycle + streams in ExCapp—one home, $35M tracked.”  
+
+Self-Serve: “Ops pulls trends, no tech—99% cases solved.”
+
+Displaying Expertise
+Qlik: “Optimized BD1 75%—Billing Cycle’s 1d refresh is next.”  
+
+Leadership: “Led 4 peers—steered Jen’s ‘sleek’ UI—your team’s set.”  
+
+Vision: “Scaled Equities 8h→1.5h—James’s $35M streams unified.”
 
 Why This Wins
-Ashwin’s Needs: OTC clarity (ProdX fix), CIT control (UAT win)—quick, practical.  
+Lara’s Targets: Speed (67%), scale (ExCapp), self-serve (2 clicks)—nailed.  
 
-Your VP Case: “Led OTC docs, cut Prod queries 50%” + “Prototyped CIT—Ashwin/Ede backed”—unbeatable impact.  
+VP Case: “Sped reporting 67%, scaled $35M, ED-backed”—line 3 locked.  
 
-ExCapp Fit: Migration + optimization (7min echo)—you’re the Analytics leader.
+ED Path: James’s visibility—promotion gold.
 
 Explain to Someone
-“Hey, Ashwin’s on my VP train—wants OTC logic clear and CIT dashboard sharper. I’m documenting OTC now—done by March 31—and prototyping CIT in UAT by April. He’ll back me with feedback, even get Ede in. Just syncing Praveen so we don’t trip!”
-Start with that email today—game on! Need an email draft or CIT pitch tweak? Next, Production Support JIRA Template? Your move!
+“Lara wants speed—Tableau’s Billing Cycle lags. I’ll move it to Qlik Sense by March 31—67% faster—then self-serve by April. James’s streams next—feedback May, VP’s mine!”
+Start now—email out, Ady/Kristin texted. Need a draft or metric tweak? Next, Production Support JIRA Template? Go!
 
