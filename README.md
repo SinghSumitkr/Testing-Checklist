@@ -1,18 +1,7 @@
-Draft Reply to Lara (with MGhosh)
-Subject: Re: Thanks for Yesterday – Excited for Equities MIS  
-Hi Lara and MGhosh,  
-Lara—thanks for the heads-up and for yesterday’s chat! I’m buzzing about this Equities Licensing Invoices MIS dashboard—sounds like a game-changer, and I’m eager to jump in and make it shine for the business.  
-Let’s grab a quick call to sort out what’s needed—how’s Monday or Tuesday (March 24-25) for you both? I could swing 10 AM IST for 15-30 minutes, but I’m happy to shuffle if that’s off. Just want to get rolling and cook up a first UAT version soon.  
-I’ve got the Billing Cycle Metrics walkthrough locked in with Ady and Kristin for Tuesday—still keen to keep that moving, though I might slow the pace a bit to give Equities the spotlight it deserves. Will tweak as we go—just let me know what you think!  
-Lara—this is such a cool chance to deliver big—huge thanks for pointing me to these gems. Can’t wait to dig in! 
-
-
-Draft Reply to Ady and Kristin
-Subject: Tuesday Walkthrough – Billing Cycle Metrics Update  
-Hi Ady and Kristin,  
-Awesome that we’re set for Tuesday’s Billing Cycle Metrics walkthrough—thanks for locking in! I’m still super excited to dig into the Tableau setup with you both and get that rolling in ExCapp Qlik Sense.  
-Quick heads-up: Lara tossed me a new curveball today—an Equities Licensing Invoices MIS dashboard that’s a bit higher profile. I’m not dropping Billing Cycle (love that one!), but I might need to ease up the pace a tad to juggle both. The first UAT cut I’d hoped for by early April (around the 7th) might slide a little—maybe mid-April now, depending on how Equities shapes up. Cool with you? I’ll know more after chatting with Lara next week and can keep you posted.  
-Looking forward to Tuesday—any prep I should do?  
-
-
+Subject: Great Chat Friday – Let’s Keep the Ball Rolling!  
+Hi Manish,  
+Just wanted to drop a quick note to say thanks for taking the time to chat on Friday—really enjoyed connecting with you! Loved hearing about your world—those 25-30 dashboards, the slick event triggers with Qlik Sense API, and your AWS Athena push. That .NET code for data-ready signals is genius—I’m definitely keen to pick your brain on that as we gear up for event-based triggers ourselves this year.  
+It was cool to share what we’ve been up to in ExCapp Analytics too—slashing that 18 GB BD1 dashboard from 10 hours to 2 with multi-threading felt like a big win! And those AWS S3/Athena hurdles we smoothed out? Happy to swap notes if you hit any snags rolling that into Prod—sounds like we’ve been down a similar road.  
+Your mashup and NPrinting insights got me thinking—our regression testing tool might be a fun collab point too, though I get the user demand piece can be tricky. Let’s definitely keep the convo going—maybe a quick sync in a few weeks once your Athena Prod settles? Feel free to ping me anytime if you’re wrestling with performance or whatever else pops up—I’d love to help out.  
+Have a great week ahead, and thanks again—awesome to team up with someone tackling the same analytics grind!  
 
